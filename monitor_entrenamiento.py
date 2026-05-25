@@ -1,5 +1,5 @@
 """
-Nombre del Alumno: Ian Morales
+Nombre del Alumno: Ian Luis Morales Canales
 Matrícula: UX25II023
 Fecha: 25/05/2026
 Examen Segundo Parcial - Programación Estructurada
@@ -166,7 +166,7 @@ if __name__ == "__main__":
 """
 CUESTIONARIO DE ANÁLISIS DE BIBLIOTECAS
 
-1. En datetime.datetime.now(), datetime es la clase que viene de la biblioteca datetime y now() es el método que usamos para obtener la fecha y hora actual. Esto se relaciona con las bibliotecas externas porque usamos herramientas ya hechas por Python en lugar de programarlas desde cero.
+1. En datetime.datetime.now(), datetime es el módulo y datetime también es la clase que viene de la biblioteca datetime, mientras que now() es el método que usamos para obtener la fecha y hora actual. Esto se relaciona con las bibliotecas externas porque usamos herramientas ya hechas por Python en lugar de programarlas desde cero.
 
 2. La diferencia es que cuando usamos import math debemos escribir math.sqrt() o math.pow() para usar las funciones. En cambio, si usamos from math import sqrt, podemos escribir solo sqrt(). En el código usé import math para identificar mejor de qué biblioteca viene cada funcion.
 
