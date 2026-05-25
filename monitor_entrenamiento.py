@@ -36,12 +36,13 @@ def obtener_info_sistema():
     print("Plataforma:", sys.platform)
 
     print("Versión de Python:")
-    
+
     print(sys.version)
 
     print("Argumentos del sistema:")
 
     print(sys.argv)
+
 
 def simular_metricas_entrenamiento(cantidad_epochs):
     """
@@ -92,7 +93,27 @@ def analizar_rendimiento(lista_loss):
     """
     Usa la biblioteca 'statistics' para analizar el comportamiento del entrenamiento.
     """
-    pass
+
+    print("\n=== ANÁLISIS DE RENDIMIENTO ===")
+
+    media = statistics.mean(lista_loss)
+
+    desviacion = statistics.stdev(lista_loss)
+
+    mediana = statistics.median(lista_loss)
+
+    print("Media del loss:", round(media, 3))
+
+    print("Desviación estándar:", round(desviacion, 3))
+
+    print("Mediana del entrenamiento:", round(mediana, 3))
+
+    if media >= UMBRAL_ERROR_CRITICO:
+
+        print("\nERROR CRÍTICO DETECTADO")
+
+        sys.exit()
+
 
 def calcular_rmse(predicciones, reales):
     """
