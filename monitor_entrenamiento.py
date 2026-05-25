@@ -1,7 +1,7 @@
 """
 Nombre del Alumno: Ian Morales
-Matrícula: [TU MATRÍCULA]
-Fecha: [FECHA]
+Matrícula: UX25II023
+Fecha: 25/05/2026
 Examen Segundo Parcial - Programación Estructurada
 """
 
@@ -30,8 +30,16 @@ def obtener_info_sistema():
     """
     Usa la biblioteca 'sys' para validar el entorno de ejecución.
     """
-    pass
 
+    print("\n=== INFORMACIÓN DEL SISTEMA ===")
+
+    print("Plataforma:", sys.platform)
+
+    print("Versión de Python:")
+    print(sys.version)
+
+    print("Argumentos del sistema:")
+    print(sys.argv)
 
 def simular_metricas_entrenamiento(cantidad_epochs):
     """
