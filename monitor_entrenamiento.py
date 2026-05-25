@@ -162,3 +162,17 @@ if __name__ == "__main__":
     reales = [1.0, 0.9, 1.0, 0.8]
 
     calcular_rmse(predicciones, reales)
+
+"""
+CUESTIONARIO DE ANÁLISIS DE BIBLIOTECAS
+
+1. En datetime.datetime.now(), datetime es la clase que viene de la biblioteca datetime y now() es el método que usamos para obtener la fecha y hora actual. Esto se relaciona con las bibliotecas externas porque usamos herramientas ya hechas por Python en lugar de programarlas desde cero.
+
+2. La diferencia es que cuando usamos import math debemos escribir math.sqrt() o math.pow() para usar las funciones. En cambio, si usamos from math import sqrt, podemos escribir solo sqrt(). En el código usé import math para identificar mejor de qué biblioteca viene cada funcion.
+
+3. Primero la función de simulación genera los valores de loss y los guarda en una lista. Después esa lista se manda a la función de análisis para calcular estadísticas. Y al final, se usan listas de predicciones y valores reales para calcular el RMSE y medir el error.
+
+4. Utilicé listas para guardar los valores de loss, los eventos y también las predicciones y valores reales. Las elegi ya que pueden guardar muchos datos e implementar ciclos facilmente, con variables simples esto seria mas complicado.
+
+5. No tuve que hacer manualmente la fórmula de la desviación estándar porque la biblioteca statistics ya incluye la función stdev(). Esto se relaciona con la abstracción porque Python ya tiene estas herramientas preparadas para no tener que pasar por toda una logica extensa.
+"""
