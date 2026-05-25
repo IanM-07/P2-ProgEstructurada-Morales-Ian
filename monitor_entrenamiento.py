@@ -148,4 +148,17 @@ def calcular_rmse(predicciones, reales):
 # ==========================================
 
 if __name__ == "__main__":
+
     print("=== INICIANDO SIMULADOR DE AGENTES DE IA ===")
+
+    obtener_info_sistema()
+
+    lista_loss = simular_metricas_entrenamiento(MAX_EPOCHS)
+
+    analizar_rendimiento(lista_loss)
+
+    predicciones = [0.8, 0.7, 0.9, 0.6]
+
+    reales = [1.0, 0.9, 1.0, 0.8]
+
+    calcular_rmse(predicciones, reales)
