@@ -36,16 +36,56 @@ def obtener_info_sistema():
     print("Plataforma:", sys.platform)
 
     print("Versión de Python:")
+    
     print(sys.version)
 
     print("Argumentos del sistema:")
+
     print(sys.argv)
 
 def simular_metricas_entrenamiento(cantidad_epochs):
     """
     Usa las bibliotecas 'random' y 'datetime' para simular los datos de entrenamiento.
     """
-    pass
+
+    print("\n=== SIMULACIÓN DE ENTRENAMIENTO ===")
+
+    inicio = datetime.datetime.now()
+
+    fecha_formateada = inicio.strftime("%d/%m/%Y %H:%M:%S")
+
+    print("Inicio del entrenamiento:", fecha_formateada)
+
+    lista_loss = []
+
+    eventos = [
+        "Epoch exitoso",
+        "Gradiente inestable",
+        "Actualización de pesos"
+    ]
+
+    for epoch in range(cantidad_epochs):
+
+        loss = round(random.uniform(0.1, 1.0), 3)
+
+        probabilidad = round(random.random(), 3)
+
+        evento = random.choice(eventos)
+
+        lista_loss.append(loss)
+
+        print("\nEpoch:", epoch + 1)
+        print("Loss:", loss)
+        print("Probabilidad de éxito:", probabilidad)
+        print("Evento:", evento)
+
+    fin = datetime.datetime.now()
+
+    diferencia = fin - inicio
+
+    print("\nTiempo total del entrenamiento:", diferencia)
+
+    return lista_loss
 
 
 def analizar_rendimiento(lista_loss):
@@ -53,7 +93,6 @@ def analizar_rendimiento(lista_loss):
     Usa la biblioteca 'statistics' para analizar el comportamiento del entrenamiento.
     """
     pass
-
 
 def calcular_rmse(predicciones, reales):
     """
