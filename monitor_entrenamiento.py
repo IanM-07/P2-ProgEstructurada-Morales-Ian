@@ -119,7 +119,28 @@ def calcular_rmse(predicciones, reales):
     """
     Usa la biblioteca 'math' para calcular el Root Mean Squared Error (RMSE).
     """
-    pass
+
+    print("\n=== CÁLCULO RMSE ===")
+
+    suma = 0
+
+    for i in range(len(predicciones)):
+
+        diferencia = reales[i] - predicciones[i]
+
+        cuadrado = math.pow(diferencia, 2)
+
+        suma += cuadrado
+
+    media = suma / len(predicciones)
+
+    rmse = math.sqrt(media)
+
+    epochs_redondeados = math.ceil(rmse)
+
+    print("RMSE:", round(rmse, 3))
+
+    print("Epochs redondeados:", epochs_redondeados)
 
 
 # ==========================================
